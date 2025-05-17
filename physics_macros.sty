@@ -1,0 +1,31 @@
+% physics_macros.sty
+\ProvidesPackage{physics_macros}
+
+% Common symbols
+\newcommand{\Msun}{\ensuremath{M_\odot}}
+\newcommand{\Lsun}{\ensuremath{L_\odot}}
+\newcommand{\Rsun}{\ensuremath{R_\odot}}
+
+% Units
+\usepackage{siunitx}
+\sisetup{separate-uncertainty=true, per-mode=symbol}
+
+% Physical constants (can add more)
+\newcommand{\kb}{\ensuremath{k_\mathrm{B}}}
+\newcommand{\NA}{\ensuremath{N_\mathrm{A}}}
+\newcommand{\G}{\ensuremath{G}}
+
+% Math shortcuts
+\newcommand{\ddt}[1]{\frac{\mathrm{d}#1}{\mathrm{d}t}}
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\avg}[1]{\left\langle #1 \right\rangle}
+\newcommand{\orderof}[1]{\ensuremath{\mathcal{O}(#1)}}
+
+% Vectors and bold
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+% Astrophysics notation
+\newcommand{\Teff}{\ensuremath{T_{\mathrm{eff}}}}
+\newcommand{\logg}{\ensuremath{\log g}}
+
+\endinput
