@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.2)  17 MAY 2025 19:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.2)  5 JUN 2025 18:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -986,21 +986,34 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<plots/dt_vs_age.pdf, id=5, 210.5607pt x 200.5877pt>
-File: plots/dt_vs_age.pdf Graphic file (type pdf)
-<use plots/dt_vs_age.pdf>
-Package pdftex.def Info: plots/dt_vs_age.pdf  used on input line 53.
-(pdftex.def)             Requested size: 210.56017pt x 200.58722pt.
+<plots/log_dt_vs_model_number.pdf, id=5, 200.1879pt x 200.1879pt>
+File: plots/log_dt_vs_model_number.pdf Graphic file (type pdf)
+<use plots/log_dt_vs_model_number.pdf>
+Package pdftex.def Info: plots/log_dt_vs_model_number.pdf  used on input line 53.
+(pdftex.def)             Requested size: 200.1874pt x 200.1874pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 62.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 62.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 62.
+<plots/R_vs_zone.pdf, id=7, 207.83847pt x 201.25436pt>
+File: plots/R_vs_zone.pdf Graphic file (type pdf)
+<use plots/R_vs_zone.pdf>
+Package pdftex.def Info: plots/R_vs_zone.pdf  used on input line 67.
+(pdftex.def)             Requested size: 207.83795pt x 201.25386pt.
+ [1{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}
 
 
-LaTeX Warning: Empty bibliography on input line 66.
-
-[1{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}
 
 
+{c:/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./plots/log_dt_vs_model_number.pdf> <./plots/R_vs_zone.pdf>]
 
+LaTeX Warning: Empty bibliography on input line 76.
 
- <./plots/dt_vs_age.pdf>] (./main.aux)
+[2
+
+] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-05-08>
@@ -1012,18 +1025,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27127 strings out of 473992
- 538840 string characters out of 5745049
- 1940907 words of memory out of 5000000
- 49318 multiletter control sequences out of 15000+600000
- 588474 words of font info for 60 fonts, out of 8000000 for 9000
+ 27168 strings out of 473992
+ 539589 string characters out of 5745049
+ 1943907 words of memory out of 5000000
+ 49346 multiletter control sequences out of 15000+600000
+ 600506 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,8n,107p,10956b,906s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on main.pdf (1 page, 161441 bytes).
+ 108i,11n,107p,10956b,916s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+Output written on main.pdf (2 pages, 307477 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 135 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
