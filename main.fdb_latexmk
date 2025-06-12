@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1749733869.02756 -1
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1749735360.63852 -1
   "bibliography.bib" 1747499879 18 fcb15cda37694b622ffa2753182f024f ""
-  "main.bcf" 1749733868 108492 88e763dc2cb453d7026017b639e467ac "pdflatex"
+  "main.bcf" 1749735360 108492 88e763dc2cb453d7026017b639e467ac "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1749733863.5882 "c:/Users/bruno/OneDrive/master_of_science/sse/lab_report/main.tex" "main.pdf" "main" 1749733869.02861 0
-  "c:/Users/bruno/OneDrive/master_of_science/sse/lab_report/main.tex" 1749733859 6641 4abe25bcfee86565a059b3e30b8cf3b2 ""
+["pdflatex"] 1749735356.77938 "c:/Users/bruno/OneDrive/master_of_science/sse/lab_report/main.tex" "main.pdf" "main" 1749735360.63994 0
+  "c:/Users/bruno/OneDrive/master_of_science/sse/lab_report/main.tex" 1749735355 6916 73a75e9b51ba73bf801867002c1ecfe9 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1717329813 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1717329813 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1717329813 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -176,11 +176,11 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1717332942 5529302 90924f286bd62ce7380ad2a7c245cc29 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1717333341 8225849 3ab66f6257ba7b47be7e91292a4f8130 ""
   "c:/texlive/2024/texmf.cnf" 1717332916 713 614551405fc44b98efbf516466e3c909 ""
-  "main.aux" 1749733868 2873 5015dda39526d20bf754d6e0eee706b1 "pdflatex"
+  "main.aux" 1749735360 2977 1fec3e41d6f245175b37623452b2ff44 "pdflatex"
   "main.bbl" 1748422584 486 76d65a242ec496c9b4361af646ff12cb "biber main"
-  "main.out" 1749733867 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1749733868 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
-  "main.tex" 1749733859 6641 4abe25bcfee86565a059b3e30b8cf3b2 ""
+  "main.out" 1749735359 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1749735360 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
+  "main.tex" 1749735355 6916 73a75e9b51ba73bf801867002c1ecfe9 ""
   "physics_macros.sty" 1747499857 883 e69d3e5567ef4732d3484fe2dc9ece30 ""
   "plots/R_vs_zone.pdf" 1749140960 168907 913a5c406f1012303de65be6b3ff3e8a ""
   "plots/log_dt_vs_model_number.pdf" 1748422713 165121 3b83273df371d49e7710f9860abdadb5 ""
