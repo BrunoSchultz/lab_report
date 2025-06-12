@@ -73,7 +73,7 @@ central zone (zone number 1 or the zone with the highest number).
 \paragraph{Q.1.4:} Which burning stages did the simulation go through, and where did that burning take
 place? Graphically Illustrate your answer
 
-\paragraph{A:} The simulation went through hydrogen burning, helium burning. The burning stages can be identified by looking at the columns \texttt{he\_core\_mass} and \texttt{c12\_core\_mass} in the history file. These columns indicate the mass coordinate within the star where helium and carbon burning occurs, respectively. The burning stages can be graphically illustrated by plotting the mass coordinate of the burning regions against the stellar age.  
+\paragraph{A:} The simulation progresses through several burning stages: initially, during the pre-main sequence phase (\(\lesssim 4 \times 10^7\) years), there is no significant hydrogen burning, as nuclear reactions contribute less than \(1\%\) of the total luminosity. Once the star reaches ZAMS (when nuclear luminosity exceeds \(99\%\) of the total) hydrogen burning starts, and star enters the main sequence. This burning stages can be identified by examining the \texttt{he\_core\_mass} columns in the history file, which indicate the mass coordinates within which there is helium. The evolution of these burning regions can be illustrated by plotting their mass coordinates as a function of stellar age.  
 
 \paragraph{Q.1.5:} 
 
@@ -91,7 +91,9 @@ During the pre-main sequence phase \(\lesssim 10^7\,\text{years}\), the star con
 
 \paragraph{Q2.1:} : In terms of relative mass coordinate (q), what parts of your star are convective at the
 terminal-age main sequence (TAMS)? Use information about temperature gradients in
-a profile to show this in a plot
+a profile to show this in a plot.
+
+\paragraph{A:} 
 
 \printbibliography
 
