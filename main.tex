@@ -73,6 +73,26 @@ central zone (zone number 1 or the zone with the highest number).
 \paragraph{Q.1.4:} Which burning stages did the simulation go through, and where did that burning take
 place? Graphically Illustrate your answer
 
+\paragraph{A:} The simulation went through hydrogen burning, helium burning. The burning stages can be identified by looking at the columns \texttt{he\_core\_mass} and \texttt{c12\_core\_mass} in the history file. These columns indicate the mass coordinate within the star where helium and carbon burning occurs, respectively. The burning stages can be graphically illustrated by plotting the mass coordinate of the burning regions against the stellar age.  
+
+\paragraph{Q.1.5:} 
+
+\paragraph{Q.1.5:} During the evolution of the stellar model, on what timescales does contraction or expansion occur? You can estimate the contraction/expansion timescale as \(\left|R/\dot{R}\right|\). Show this in a plot with \texttt{model\_number} on the x-axis. Furthermore, show the evolution of the three timescales mentioned above in this plot, and explain in your answer how you defined them. Discuss why the model follows certain timescales during different phases of the simulation.
+
+\paragraph{A:} The contraction or expansion timescale can be estimated as \(\left|R/\dot{R}\right|\), where \(R\) is the radius of the star and \(\dot{R}\) is the time derivative of the radius. This can be calculated from the history file, where the radius and its change over time are recorded. The evolution of the contraction/expansion timescale can be plotted against the model number, showing how the star's size changes over time. We calculate the timescales of stellar evolution as follows:
+\begin{align*}
+    \tau_{\text{dyn}} &\simeq 0.02 \left(\frac{R}{\Rsun}\right)^{3/2} \left(\frac{\Msun}{M}\right)^{1/2} \text{days}, \\
+    \tau_{\text{KH}} &\simeq 1.5 \times 10^7\left(\frac{M}{\Msun}\right)^{2} \frac{\Rsun}{R}\frac{\Lsun}{L} \text{years}, \\
+    \tau_{\text{nuc}} &\simeq 1.5 \times 10^6\left(\frac{R}{\Rsun}\right)^{2} \left(\frac{M}{\Msun}\right)^{-1} \text{years}.
+\end{align*}
+During the pre-main sequence phase \(\lesssim 10^7\,\text{years}\), the star contracts under the influence of gravity, leading to a decrease in radius. As the the star contracts, the dynamical timescale (the time it takes for the star to achieve HE\footnote{hydrostatic equilibrium}) also drops, because the star is becoming more compact and can respond more quickly to changes in its internal structure (\(\tau_{\text{dyn}} \propto R^{3/2}\)). Furthermore, the Kelvin-Helmholtz timescale (the time it takes for the star to achieve TE\footnote{thermal equilibrium}) also decreases since . Since during this phase nuclear fusion is not yet active, one can clear see that the evolution of the star occur at the thermal timescale (\(\tau_{\text{KH}} \simeq 10^7 \text{yr}\)).
+
+\section{Exercise 2}
+
+\paragraph{Q2.1:} : In terms of relative mass coordinate (q), what parts of your star are convective at the
+terminal-age main sequence (TAMS)? Use information about temperature gradients in
+a profile to show this in a plot
+
 \printbibliography
 
 \end{document}
