@@ -71,9 +71,8 @@ central zone (zone number 1 or the zone with the highest number).
 \paragraph{Q.1.4:} Which burning stages did the simulation go through, and where did that burning take
 place? Graphically Illustrate your answer
 
-\paragraph{A:} Initially, during the pre-main sequence phase (\(\lesssim 4 \times 10^7\) years), there is no nuclear burning. Once the star reaches the zero-age main sequence (ZAMS), defined as the point where the nuclear luminosity exceeds \(99\%\) of the total luminosity, hydrogen burning begins in the core. This is evident from the increase in the hydrogen-burning luminosity (\texttt{log\_LH}) in the history file. Due to the imposed limit \texttt{he\_core\_mass\_limit=0.1}, the star does not reach the conditions necessary for helium burning; the triple-alpha luminosity (\texttt{log\_LHe}) remains negligible throughout the simulation. 
-
-Figure~\ref{fig:q14_luminosity} shows the evolution of hydrogen and helium burning luminosities as the star ages. After reaching the ZAMS, hydrogen burning becomes dominant, while helium burning remains negligible throughout the simulation. To illustrate where hydrogen burning occurs, two additional plots are provided: the x-axis shows stellar age, the y-axis shows the mass coordinate, and the colorbar indicates the abundances of hydrogen and helium, respectively. 
+\paragraph{A:} Only after the star reaches the zero-age main sequence, defined as the point where the nuclear luminosity exceeds \(99\%\) of the total luminosity (\(\sim 4 \times 10^7\)), is there significant hydrogen burning. Due to the imposed limit \texttt{he\_core\_mass\_limit=0.1}, the star does not reach the conditions necessary for helium burning. 
+Figure \ref{fig:q14_luminosity} displays the evolution of hydrogen and helium burning luminosities as the star ages. After the star reaches the ZAMS, hydrogen burning is significant, while helium burning remains negligible for the entire simulation. To indicate where hydrogen burning takes place, Figures \ref{fig:q14_abundancy_H} and\ref{fig:q14_abundancy_e} show the abundances of hydrogen and helium as functions of mass coordinate and stellar age for different late-stage profiles. These plots demonstrate that hydrogen burning is confined to the innermost \(\lesssim 0.15 \text{M}_\odot\)  throughout the simulated period.
 
 \begin{figure}[htbp]
     \centering
@@ -89,14 +88,10 @@ Figure~\ref{fig:q14_luminosity} shows the evolution of hydrogen and helium burni
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics{q14_abundancy_e.pdf}
+    \includegraphics{q14_abundancy_He.pdf}
     \caption{Helium abundance as a function of mass coordinate and stellar age. The colorbar indicates the helium mass fraction. Helium accumulates in the core as hydrogen is fused.}
     \label{fig:q14_abundancy_e}
 \end{figure}
-
-
-\paragraph{Q.1.5:} 
-
 \paragraph{Q.1.5:} During the evolution of the stellar model, on what timescales does contraction or expansion occur? You can estimate the contraction/expansion timescale as \(\left|R/\dot{R}\right|\). Show this in a plot with \texttt{model\_number} on the x-axis. Furthermore, show the evolution of the three timescales mentioned above in this plot, and explain in your answer how you defined them. Discuss why the model follows certain timescales during different phases of the simulation.
 
 \paragraph{A:} The contraction or expansion timescale can be estimated as \(\left|R/\dot{R}\right|\), where \(R\) is the radius of the star and \(\dot{R}\) is the time derivative of the radius. This can be calculated from the history file, where the radius and its change over time are recorded. The evolution of the contraction/expansion timescale can be plotted against the model number, showing how the star's size changes over time. We calculate the timescales of stellar evolution as follows:
@@ -105,7 +100,7 @@ Figure~\ref{fig:q14_luminosity} shows the evolution of hydrogen and helium burni
     \tau_{\text{KH}} &\simeq 1.5 \times 10^7\left(\frac{M}{\Msun}\right)^{2} \frac{\Rsun}{R}\frac{\Lsun}{L} \text{years}, \\
     \tau_{\text{nuc}} &\simeq 1.5 \times 10^6\left(\frac{R}{\Rsun}\right)^{2} \left(\frac{M}{\Msun}\right)^{-1} \text{years}.
 \end{align*}
-During the pre-main sequence phase \(\lesssim 10^7\,\text{years}\), the star contracts under the influence of gravity, leading to a decrease in radius. As the the star contracts, the dynamical timescale (the time it takes for the star to achieve HE\footnote{hydrostatic equilibrium}) also drops, because the star is becoming more compact and can respond more quickly to changes in its internal structure (\(\tau_{\text{dyn}} \propto R^{3/2}\)). Furthermore, the Kelvin-Helmholtz timescale (the time it takes for the star to achieve TE\footnote{thermal equilibrium}) also decreases since . Since during this phase nuclear fusion is not yet active, one can clear see that the evolution of the star occur at the thermal timescale (\(\tau_{\text{KH}} \simeq 10^7 \text{yr}\)).
+During the pre-main sequence phase, the star contracts under the influence of gravity, leading to a decrease in radius. As the the star contracts, the dynamical timescale (the time it takes for the star to achieve HE\footnote{hydrostatic equilibrium}) also drops, because the star is becoming more compact and can respond more quickly to changes in its internal structure (\(\tau_{\text{dyn}} \propto R^{3/2}\)). Furthermore, the Kelvin-Helmholtz timescale (the time it takes for the star to achieve TE\footnote{thermal equilibrium}) also decreases since . Since during this phase nuclear fusion is not yet active, one can clear see that the evolution of the star occur at the thermal timescale (\(\tau_{\text{KH}} \simeq 10^7 \text{yr}\)).
 
 \section{Exercise 2}
 
