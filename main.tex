@@ -60,20 +60,40 @@ choice is constant, and discuss why. From this plot, also infer which zone is th
 central zone (zone number 1 or the zone with the highest number).
 
 \paragraph{A:} The grid spacing in a profile file is not constant. MESA uses a non-uniform grid so it can better capture important changes inside the star, making the grid finer where the structure changes quickly and coarser where things are more uniform. In Figure \ref{fig:grid_spacing}, the top graph shows that zone number 1 is at the surface, while the highest zone number is at the center. The bottom graph shows that the spacing between zones (measured as \(\log_{10}(\Delta R / R)\)) is not the same everywhere, confirming that the grid is not evenly spaced. Here, \(\Delta R\) is the difference in radius between adjacent zones, i.e. \(\Delta R = R_{i+1} - R_i\).
-
-
+%
 \begin{figure}[htbp]
     \centering
     \includegraphics{R_vs_zone.pdf}
     \caption{Grid spacing in a profile file. The x-axis shows the zone number. Top: The radius of each zone.}
     \label{fig:grid_spacing}
 \end{figure}
-
-
+%
 \paragraph{Q.1.4:} Which burning stages did the simulation go through, and where did that burning take
 place? Graphically Illustrate your answer
 
-\paragraph{A:} The simulation progresses through several burning stages: initially, during the pre-main sequence phase (\(\lesssim 4 \times 10^7\) years), there is no significant hydrogen burning, as nuclear reactions contribute less than \(1\%\) of the total luminosity. Once the star reaches ZAMS (when nuclear luminosity exceeds \(99\%\) of the total) hydrogen burning starts, and star enters the main sequence. This burning stages can be identified by examining the \texttt{he\_core\_mass} columns in the history file, which indicate the mass coordinates within which there is helium. The evolution of these burning regions can be illustrated by plotting their mass coordinates as a function of stellar age.  
+\paragraph{A:} Initially, during the pre-main sequence phase (\(\lesssim 4 \times 10^7\) years), there is no nuclear burning. Once the star reaches the zero-age main sequence (ZAMS), defined as the point where the nuclear luminosity exceeds \(99\%\) of the total luminosity, hydrogen burning begins in the core. This is evident from the increase in the hydrogen-burning luminosity (\texttt{log\_LH}) in the history file. Due to the imposed limit \texttt{he\_core\_mass\_limit=0.1}, the star does not reach the conditions necessary for helium burning; the triple-alpha luminosity (\texttt{log\_LHe}) remains negligible throughout the simulation. 
+
+Figure~\ref{fig:q14_luminosity} shows the evolution of hydrogen and helium burning luminosities as the star ages. After reaching the ZAMS, hydrogen burning becomes dominant, while helium burning remains negligible throughout the simulation. To illustrate where hydrogen burning occurs, two additional plots are provided: the x-axis shows stellar age, the y-axis shows the mass coordinate, and the colorbar indicates the abundances of hydrogen and helium, respectively. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{q14_luminosity.pdf}
+    \caption{Hydrogen and helium burning luminosities as a function of stellar age.}
+    \label{fig:q14_luminosity}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{q14_abundancy_H.pdf}
+    \caption{Hydrogen abundance as a function of mass coordinate and stellar age. The colorbar indicates the hydrogen mass fraction. Hydrogen burning occurs in the core, where the abundance decreases over time.}
+    \label{fig:q14_abundancy_H}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{q14_abundancy_e.pdf}
+    \caption{Helium abundance as a function of mass coordinate and stellar age. The colorbar indicates the helium mass fraction. Helium accumulates in the core as hydrogen is fused.}
+    \label{fig:q14_abundancy_e}
+\end{figure}
+
 
 \paragraph{Q.1.5:} 
 
