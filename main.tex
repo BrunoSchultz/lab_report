@@ -113,7 +113,7 @@ During the pre-main sequence phase, the star contracts under gravity, causing it
     \caption{Evolution of the dynamical timescale, Kelvin-Helmholtz timescale, and nuclear timescale as a function of model number. The x-axis shows the model number, while the y-axis shows the timescales. }
     \label{fig:q15_timescales}
 \end{figure}
-
+\clearpage
 \section*{Exercise 2}
 
 \paragraph{Q2.1:} In terms of relative mass coordinate \(q\), what parts of your star are convective at the terminal-age main sequence (TAMS)? Use information about temperature gradients in
@@ -161,7 +161,7 @@ The $8.655\,\Msun$ track (blue) moves to higher central temperatures ($T_c$) and
     \caption{Tracks of the two evolutionary models in the \(\log T_c\)-\(\log \rho_c\) diagram. The dashed lines correspond to the boundaries between different stellar evolutionary phases, as in Fig. 3.4 of the SSE lecture notes.}
     \label{fig:q24_deg}
 \end{figure*}
-
+\clearpage
 \section*{Exercise 3}
 
 \paragraph{Q3.1:} Does MESA use the Schwarzschild or Ledoux criterion for convection by default? 
@@ -195,11 +195,11 @@ We find that the hydrogen-burning lifetime increases significantly with higher o
 
 \paragraph{Q3.4:} For the first profile before hydrogen is exhausted in the core (which happens when, say, \(X_c < 10^{-6}\)) and for the first profile after that, plot the H and He abundances as a function of mass coordinate. Do this for both the Ledoux and the Schwarzschild simulation. For which simulation did the abundance profile change more dramatically, and why?
 
-\paragraph{A:} In Figure~\ref{fig:q34hydrogen_exhausted}, we compare the hydrogen and helium abundance profiles before and after core hydrogen exhaustion for both the Schwarzschild and Ledoux simulations of a $15\Msun$ star. We find that the abundance profiles change more dramatically in the Schwarzschild simulation. After core hydrogen exhaustion, the Schwarzschild model exhibits a noticeable step-like structure in the hydrogen and helium mass fractions. This results from the fact that the Schwarzschild criterion for convection does not account for stabilizing composition gradients \(\nabla_\mu\). It only considers the temperature gradient when determining convective instability. As a result, convective mixing penetrates farther into surrounding layers, even when a chemical gradient is present. In contrast, the Ledoux simulation shows a much more gradual and limited change in composition, with a smooth transition between H-rich and He-rich regions. This is because the Ledoux criterion includes the stabilizing effect of mean molecular weight gradients, reducing mixing. In stellar interiors, molecular weight typically increases toward the center due to nuclear processing. Therefore, the gradient \(\nabla_\mu > 0\) suppresses convection in the Ledoux criterion. This makes sense, since an upwardly displaced fluid element from a deeper layer will have a higher molecular weight (i.e., more heavy elements) than its surroundings. Even if it is hotter, the increased molecular weight makes it denser overall, causing a restoring force to push it back downward. Thus, the Ledoux criterion prevents convection in regions where the Schwarzschild criterion would otherwise allow it, leading to less mixing and smoother abundance profiles.
+\paragraph{A:} In Figure~\ref{fig:q34hydrogen_exhausted}, we compare the hydrogen and helium abundance profiles before and after core hydrogen exhaustion for both the Schwarzschild and Ledoux simulations of a $15\Msun$ star. We find that the abundance profiles change more dramatically in the Schwarzschild simulation. After core hydrogen exhaustion, the Schwarzschild model exhibits a noticeable step-like structure in the hydrogen and helium mass fractions. This results from the fact that the Schwarzschild criterion for convection does not account for stabilizing composition gradients \(\nabla_\mu\). It only considers the temperature gradient when determining convective instability. As a result, convective mixing penetrates farther into surrounding layers, even when a chemical gradient is present. In contrast, the Ledoux simulation shows a much more gradual and limited change in composition, with a smooth transition between H-rich and He-rich regions. This is because the Ledoux criterion includes the stabilizing effect of mean molecular weight gradients, reducing mixing. In stellar interiors, molecular weight typically increases toward the center due to nuclear processing. Therefore, the gradient \(\nabla_\mu > 0\) suppresses convection in Ledoux criterion. This makes sense, since an upwardly displaced fluid element from a deeper layer will have a higher molecular weight (i.e., more heavy elements) than its surroundings. Even if it is hotter, the increased molecular weight makes it denser overall, causing a restoring force to push it back downward. Thus, the Ledoux criterion prevents convection in regions where the Schwarzschild criterion would otherwise allow it, leading to less mixing and smoother abundance profiles.
 
 \begin{figure}
     \centering
-    \includegraphics{q34hydrogen_exhausted.pdf}
+    \includegraphics[width=0.49\textwidth]{q34hydrogen_exhausted.pdf}
     \caption{Hydrogen and helium abundance profiles before and after core hydrogen exhaustion for the Schwarzschild and Ledoux simulations.}
     \label{fig:q34hydrogen_exhausted}   
 \end{figure}
