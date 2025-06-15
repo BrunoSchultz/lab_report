@@ -71,9 +71,8 @@ central zone (zone number 1 or the zone with the highest number).
 \paragraph{Q.1.4:} Which burning stages did the simulation go through, and where did that burning take
 place? Graphically Illustrate your answer
 
-\paragraph{A:} Initially, during the pre-main sequence phase (\(\lesssim 4 \times 10^7\) years), there is no nuclear burning. Once the star reaches the zero-age main sequence (ZAMS), defined as the point where the nuclear luminosity exceeds \(99\%\) of the total luminosity, hydrogen burning begins in the core. This is evident from the increase in the hydrogen-burning luminosity (\texttt{log\_LH}) in the history file. Due to the imposed limit \texttt{he\_core\_mass\_limit=0.1}, the star does not reach the conditions necessary for helium burning; the triple-alpha luminosity (\texttt{log\_LHe}) remains negligible throughout the simulation. 
-
-Figure~\ref{fig:q14_luminosity} shows the evolution of hydrogen and helium burning luminosities as the star ages. After reaching the ZAMS, hydrogen burning becomes dominant, while helium burning remains negligible throughout the simulation. To illustrate where hydrogen burning occurs, two additional plots are provided: the x-axis shows stellar age, the y-axis shows the mass coordinate, and the colorbar indicates the abundances of hydrogen and helium, respectively. 
+\paragraph{A:} Only after the star reaches the zero-age main sequence (the point where the nuclear luminosity exceeds \(99\%\) of the total luminosity, \(\sim 4 \times 10^7\)), is there significant hydrogen burning. Due to the imposed limit \texttt{he\_core\_mass\_limit=0.1}, the star does not reach the conditions necessary for helium burning. To illustrate this,
+Figure \ref{fig:q14_luminosity} displays the evolution of hydrogen and helium burning luminosities as the star ages. After the star reaches the ZAMS, hydrogen burning is significant, while helium burning remains negligible for the entire simulation. To indicate where hydrogen burning takes place, Figures \ref{fig:q14_abundancy_H} and \ref{fig:q14_abundancy_e} show the abundances of hydrogen and helium as functions of mass coordinate and stellar age for different late-stage profiles. These plots demonstrate that hydrogen burning is confined to the innermost \(\lesssim 0.15 \text{M}_\odot\) throughout the simulated period.
 
 \begin{figure}[htbp]
     \centering
@@ -89,31 +88,79 @@ Figure~\ref{fig:q14_luminosity} shows the evolution of hydrogen and helium burni
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics{q14_abundancy_e.pdf}
+    \includegraphics{q14_abundancy_He.pdf}
     \caption{Helium abundance as a function of mass coordinate and stellar age. The colorbar indicates the helium mass fraction. Helium accumulates in the core as hydrogen is fused.}
     \label{fig:q14_abundancy_e}
 \end{figure}
-
-
-\paragraph{Q.1.5:} 
-
 \paragraph{Q.1.5:} During the evolution of the stellar model, on what timescales does contraction or expansion occur? You can estimate the contraction/expansion timescale as \(\left|R/\dot{R}\right|\). Show this in a plot with \texttt{model\_number} on the x-axis. Furthermore, show the evolution of the three timescales mentioned above in this plot, and explain in your answer how you defined them. Discuss why the model follows certain timescales during different phases of the simulation.
 
-\paragraph{A:} The contraction or expansion timescale can be estimated as \(\left|R/\dot{R}\right|\), where \(R\) is the radius of the star and \(\dot{R}\) is the time derivative of the radius. This can be calculated from the history file, where the radius and its change over time are recorded. The evolution of the contraction/expansion timescale can be plotted against the model number, showing how the star's size changes over time. We calculate the timescales of stellar evolution as follows:
+\paragraph{A:} The contraction or expansion timescale can be estimated as \(\left|R/\dot{R}\right|\), where \(R\) is the radius of the star and \(\dot{R}\) is the time derivative of the radius. The evolution of the contraction/expansion timescale can be plotted against the model number, showing how the star's size changes over time, cf. Figure \ref{fig:q14_timescales}. We calculate the timescales of stellar evolution as follows:
 \begin{align*}
     \tau_{\text{dyn}} &\simeq 0.02 \left(\frac{R}{\Rsun}\right)^{3/2} \left(\frac{\Msun}{M}\right)^{1/2} \text{days}, \\
     \tau_{\text{KH}} &\simeq 1.5 \times 10^7\left(\frac{M}{\Msun}\right)^{2} \frac{\Rsun}{R}\frac{\Lsun}{L} \text{years}, \\
-    \tau_{\text{nuc}} &\simeq 1.5 \times 10^6\left(\frac{R}{\Rsun}\right)^{2} \left(\frac{M}{\Msun}\right)^{-1} \text{years}.
+    \tau_{\text{nuc}} &\simeq \times 10^{10}\left(\frac{M}{\Msun}\right)\left(\frac{\Lsun}{L}\right)
 \end{align*}
-During the pre-main sequence phase \(\lesssim 10^7\,\text{years}\), the star contracts under the influence of gravity, leading to a decrease in radius. As the the star contracts, the dynamical timescale (the time it takes for the star to achieve HE\footnote{hydrostatic equilibrium}) also drops, because the star is becoming more compact and can respond more quickly to changes in its internal structure (\(\tau_{\text{dyn}} \propto R^{3/2}\)). Furthermore, the Kelvin-Helmholtz timescale (the time it takes for the star to achieve TE\footnote{thermal equilibrium}) also decreases since . Since during this phase nuclear fusion is not yet active, one can clear see that the evolution of the star occur at the thermal timescale (\(\tau_{\text{KH}} \simeq 10^7 \text{yr}\)).
+During the pre-main sequence phase, the star contracts under gravity, causing its radius to decrease. As this happens, the dynamical timescale (\(\tau_{\text{dyn}}\)), which measures how quickly the star can adjust to changes in structure, becomes shorter because a more compact star responds faster (\(\tau_{\text{dyn}} \propto R^{3/2}\)). The Kelvin-Helmholtz timescale (\(\tau_{\text{KH}}\)), which is the time it takes the star to radiate away its gravitational energy and reach thermal equilibrium, increases as the star contracts and its luminosity drops as it goes down the Hayashi track (\(\tau_{\text{KH}} \propto R^{-1} L^{-1}\)). The nuclear timescale (\(\tau_{\text{nuc}}\)), representing how long the star can sustain nuclear burning, also increases with the decreasing luminosity \(\tau_{\text{nuc}} \propto L^{-1}\). Upon reaching the zero-age main sequence (ZAMS), hydrogen fusion in the core becomes dominant. At this stage, the star and the timescales stabilizes staying at the same order of magnitude. The dynamical timescale remains short at about \(30 \text{min}\), the Kelvin-Helmholtz timescale stays roughly at \(10^7\) yr, and the nuclear timescale is \(10^{10}\) yr. Only as the star starts exiting the main sequence does the internal structure and thus the timescales change again. The core contracts and the outer envelope expands, increasing both the radius and luminosity. These changes cause the dynamical to increase, while the Kelvin-Helmholtz and nuclear timescale decreases due to the enhanced luminosity. Cf. Figure \ref{fig:q15_timescales}.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{R_dot_vs_model_number.pdf}
+    \caption{Contraction/expansion timescale. The x-axis shows the model number, while the y-axis shows the timescales in years. For clarity, the star age is also shown on the top x-axis.}
+    \label{fig:q14_timescales}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{timescales_vs_model_number.pdf}
+    \caption{Evolution of the dynamical timescale, Kelvin-Helmholtz timescale, and nuclear timescale as a function of model number. The x-axis shows the model number, while the y-axis shows the timescales. }
+    \label{fig:q15_timescales}
+\end{figure}
 
 \section{Exercise 2}
 
-\paragraph{Q2.1:} : In terms of relative mass coordinate (q), what parts of your star are convective at the
-terminal-age main sequence (TAMS)? Use information about temperature gradients in
+\paragraph{Q2.1:} In terms of relative mass coordinate \(q\), what parts of your star are convective at the terminal-age main sequence (TAMS)? Use information about temperature gradients in
 a profile to show this in a plot.
 
-\paragraph{A:} 
+\paragraph{A:} To the determine which part of the star is convective at the terminal-age main sequence (TAMS), we can look at the temperature gradient in a profile file. The Schwarzschild criterion states that convection occurs when the temperature radiative gradient is steeper than the adiabatic gradient. In Figure \ref{fig:q21_convective_regions}, we plot the temperature gradients as a function of the relative mass coordinate for a star with \(M = 8.655\Msun\). We can see that the star is convective whithin the central grey-colored region (\(q \lesssim 0.09\)).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{q21_grad.pdf}
+    \caption{Temperature gradients as a function of relative mass coordinate (\(q\)) at the TAMS. The convective region is where the radiative gradient (\(\nabla_{\text{rad}}\)) exceeds the adiabatic gradient (\(\nabla_{\text{ad}}\)), indicated by the shaded area.}
+    \label{fig:q21_convective_regions}
+\end{figure}
+
+\paragraph{Q2.2:} Show, in an initial mass (x-axis) vs. \(q\) (y-axis) plot, which parts of the stars simulated by you and your colleagues are convective at TAMS. Briefly explain: i) the behavior as a function of mass, and ii) the main difference to the shaded region in fig. 8.8 of the SSE lecture notes and where this difference arises from.
+
+\paragraph{A:} In Figure \ref{fig:q22_convective_regions}, we plot the convective regions at TAMS for stars with different initial masses. The x-axis shows the initial mass of the star, while the y-axis shows the maximum relative mass coordinate at which the star is convective \(q_\text{top}\). We can see that the convective region increases roughly linearly with the initial mass of the star. This trend arises because higher-mass stars generate most of their energy via the CNO cycle, which is highly temperature-sensitive. This leads to a steep radiative temperature gradient in the core, triggering convection over a more extended region for more massive stars. The main difference to the shaded region in Figure 8.8 of the SSE lecture is simply the fact that we are looking at the convective regions at TAMS, while the shaded region in the lecture notes shows the convective regions at the ZAMS. Convective regions at the ZAMS are generally larger than at TAMS. As the star evolves on the main sequence and the core becomes enriched in helium, the mean molecular weight increases, reducing the radiative gradient. This causes the convective core to shrink, so the convective region at TAMS is typically smaller than at ZAMS.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{q22_top_fit.pdf}
+    \caption{Convective regions at TAMS for stars with different initial masses. The x-axis shows the initial mass of the star, while the y-axis shows the relative mass coordinate within which the star is convective.}
+    \label{fig:q22_convective_regions}
+\end{figure}
+
+\paragraph{Q2.3:} Create an HR diagram that shows both stars that you simulated in this exercise. Show the points where they exhaust hydrogen in their cores. After H-exhaustion, is the change in \(\log(L/L_\odot)\) the same in both stars? Why (not)? 
+
+\paragraph{A:} In Figure \ref{fig:q23_H_burning}, we plot the HR diagram for the two stars simulated in this exercise \(M_1 = 8.655\Msun\) and \(M_2 = 1.645\Msun\). The points where they exhaust hydrogen in their cores are marked with red circles. After hydrogen exhaustion, the change in \(\log(L/L_\odot)\) is not the same for both stars. The lower-mass star experiences a more dramatic increase in luminosity. After core hydrogen is exhausted, it develops a degenerate helium core and continues hydrogen burning in a shell. This leads the star to ascend the red giant branch, during which the envelope expands and the luminosity increases steeply. The higher-mass stars core does not become degenerate, and it transitions more smoothly to core helium burning. While its luminosity also increases, the change in \(\log(L/L_\odot)\) is less steep compared to the low-mass star.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{q23_H_burning.pdf}
+    \caption{HR diagram for the two stars simulated in this exercise. The red circles indicate the points where the stars exhaust hydrogen in their cores.}
+    \label{fig:q23_H_burning}
+\end{figure} 
+
+\paragraph{Q2.4:} Draw the tracks of your evolutionary models computed in this exercise in a \(\log T_c\)–\(\log \rho_c\) diagram, and identify the key differences between the two. Draw the dashed lines of Fig. 3.4 in the SSE lecture notes in your plot, and explain how you drew them.
+
+\paragraph{A:} In Figure \ref{fig:q24_deg}, we plot the tracks of the two evolutionary models in a \(\log T_c\)-\(\log \rho_c\) diagram. The x-axis shows the logarithm of the central temperature, while the y-axis shows the logarithm of the central density. The dashed lines in the plot were drawn using the analytical expressions given in Figure 3.4 of the SSE lecture notes. Each line corresponds to a boundary where different pressure components become dominant: radiation vs.\ gas pressure (black, slope \(1/3\)), gas vs.\ non-relativistic degeneracy (red, slope \(2/3\)), gas vs.\ relativistic degeneracy (yellow, slope \(1/3\)), and the transition between non-relativistic and extremely relativistic degeneracy (blue, vertical at \(\log \rho \approx 6.3\)).  These boundaries were derived by equating the relevant equations of state as described in the lecture notes. They help classify which pressure component governs the stellar core at different evolutionary stages. Both tracks start similar, only shifted vertically due to their different masses. As the stars evolve, they follow different paths in the diagram. The higher-mass star (\(8.655\,\Msun\)) remains above the non-relativistic degeneracy line, while the lower-mass star (\(1.645\,\Msun\)) approaches the relativistic degeneracy line as it evolves.
+The $8.655\,\Msun$ track (blue) moves to higher central temperatures ($T_c$) and avoids degeneracy. The $1.645\,\Msun$ track (green) starts curving around the degenerate region.
+
+\begin{figure*}[p]
+    \centering
+    \includegraphics{q24_deg.pdf}
+    \caption{Tracks of the two evolutionary models in the \(\log T_c\)–\(\log \rho_c\) diagram. The dashed lines correspond to the boundaries between different stellar evolutionary phases, as in Fig. 3.4 of the SSE lecture notes.}
+    \label{fig:q24_deg}
+\end{figure*}
 
 \printbibliography
 
