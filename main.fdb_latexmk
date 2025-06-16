@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1750010948 "main.bcf" "main.bbl" "main" 1750011838 0
+["biber main"] 1750010948 "main.bcf" "main.bbl" "main" 1750012428 0
   "./bibliography.bib" 1747499879 18 fcb15cda37694b622ffa2753182f024f ""
-  "main.bcf" 1750011837 107703 5a5b0a3d7905adc5e28793922300f4b4 "pdflatex"
+  "main.bcf" 1750012428 107703 5a5b0a3d7905adc5e28793922300f4b4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1750011834 "c:/Users/bruno/OneDrive/master_of_science/sse/lab_report/main.tex" "main.pdf" "main" 1750011838 0
+["pdflatex"] 1750012425 "c:/Users/bruno/OneDrive/master_of_science/sse/lab_report/main.tex" "main.pdf" "main" 1750012428 0
   "C:/Users/bruno/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1730060956 360349 db10bb49c0b73de6fdf5f410b8fcb846 ""
   "C:/Users/bruno/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1683033725 23183116 5d822d0c608c4089b34d44814c491048 ""
   "C:/Users/bruno/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256933040 2375 baa924870cfb487815765f9094cf3728 ""
@@ -169,12 +169,12 @@
   "C:/Users/bruno/AppData/Local/Programs/MiKTeX/tex/latex/translations/dicts/translations-basic-dictionary-english.trsl" 1644052122 5588 0c1628daf15f4411ff1f463114c634a3 ""
   "C:/Users/bruno/AppData/Local/Programs/MiKTeX/tex/latex/translations/translations.sty" 1644052122 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/Users/bruno/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/bruno/OneDrive/master_of_science/sse/lab_report/main.tex" 1750011837 21042 df082acd27f7c2271138a111f6f56397 ""
-  "main.aux" 1750011837 11332 ef7fe689e90d517e6f5f2f92bb54a1b0 "pdflatex"
+  "c:/Users/bruno/OneDrive/master_of_science/sse/lab_report/main.tex" 1750012425 21080 700db7ca8d54b855f48bb8cf7c44ded0 ""
+  "main.aux" 1750012428 11332 17bfd43d543e1975d966a9e5f5581766 "pdflatex"
   "main.bbl" 1750010951 486 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.out" 1750011837 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1750011837 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
-  "main.tex" 1750011837 21042 df082acd27f7c2271138a111f6f56397 ""
+  "main.out" 1750012427 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1750012428 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
+  "main.tex" 1750012425 21080 700db7ca8d54b855f48bb8cf7c44ded0 ""
   "physics_macros.sty" 1747499857 883 e69d3e5567ef4732d3484fe2dc9ece30 ""
   "plots//R_dot_vs_model_number.pdf" 1749899852 103904 369f0dd38b2c9f4a5da64152250a3f8f ""
   "plots//R_vs_zone.pdf" 1749140960 168907 913a5c406f1012303de65be6b3ff3e8a ""
@@ -188,7 +188,7 @@
   "plots//q24_deg.pdf" 1749905029 169845 84631ddd1a0582c7b19b36b6fb1f5a53 ""
   "plots//q31center_h_he.pdf" 1750000952 170097 09cb0e96125b5e7783d059225981b0c3 ""
   "plots//q31core_burning_lifetime.pdf" 1750001663 109495 1569333439e5285876bc6adefe31c9a5 ""
-  "plots//q34hydrogen_exhausted.pdf" 1750011834 230602 e0693ac92162791b0a556ef75a8c5ba8 ""
+  "plots//q34hydrogen_exhausted.pdf" 1750012424 230624 90d322eca2710bf7ef5d5aac8e3c173f ""
   "plots//timescales_vs_model_number.pdf" 1749900003 166248 7bad2fbfee423ad15a952b480bbdec2d ""
   (generated)
   "main.aux"
