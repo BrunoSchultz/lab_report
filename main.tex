@@ -14,6 +14,7 @@
 \usepackage{booktabs}
 \usepackage{physics}
 \usepackage{float}
+\usepackage{csquotes}
 \usepackage{hyperref}
 \usepackage{physics_macros} % Your custom macros
 \usepackage{biblatex} % For bibliography
@@ -202,6 +203,51 @@ We find that the hydrogen-burning lifetime increases significantly with higher o
     \includegraphics[width=0.49\textwidth]{q34hydrogen_exhausted.pdf}
     \caption{Hydrogen and helium abundance profiles before and after core hydrogen exhaustion for the Schwarzschild and Ledoux simulations.}
     \label{fig:q34hydrogen_exhausted}   
+\end{figure}
+
+\clearpage
+\section*{Exercise 4}
+
+\paragraph{Q4.1:} What extra isotopes are included in this network using? Look for clues in the folder \texttt{\$MESA\_DIR/data/net\_data/nets}.
+
+\paragraph{A:} The \texttt{pp\_extras} network includes the standard isotopes from the basic pp-chain network \textsuperscript{1}H, \textsuperscript{3}He, \textsuperscript{4}He, \textsuperscript{12}C, \textsuperscript{14}N, \textsuperscript{16}O, \textsuperscript{20}Ne, \textsuperscript{24}Mg  and adds extra isotopes \textsuperscript{2}H, \textsuperscript{7}Li, \textsuperscript{7}Be, \textsuperscript{8}B.
+
+\paragraph{Q4.2:} Compare the pre-MS (i.e., before 4He is synthesized from hydrogen) radius evolution
+of this simulation with that of the low-mass star in Exercise 2. Is there any difference?
+If so, provide a plot that shows the different behavior, and explain what caused it.
+
+\paragraph{A:} We use a profile interval of 25 for both simulations. There is a noticeable difference in the pre-main sequence (pre-MS). The key difference is the presence of a \enquote{deuterium bump} in the radius evolution, visible as a temporary halt or even slight increase in radius at an age of about \(10^5\) years (see Figure~\ref{fig:q42_radius_vs_age}). Deuterium is a very fragile nucleus that reacts easily with normal hydrogen (\(^{2}\mathrm{H} + ^{1}\mathrm{H} \rightarrow ^{3}\mathrm{He} + \gamma\)), the second reaction in the pp chain. This reaction destroys all deuterium present in the star when \(T \approx 10^6\,\mathrm{K}\), while the protostar is still on the Hayashi line. The energy produced is large enough to halt the contraction of the PMS star for a few times \(10^5\) yr.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{q42_radius_vs_age.pdf}
+    \caption{Pre-main sequence radius evolution showing the deuterium bump at around \(10^5\) years. The temporary halt in contraction is caused by deuterium burning.}
+    \label{fig:q42_radius_vs_age}
+\end{figure}
+
+\paragraph{Q4.3:} \textsuperscript{2}H undergoes nuclear burning around \(10^6\,\mathrm{K}\). Once \textsuperscript{2}H burning starts, graphically show whether the \textsuperscript{2}H abundance decreases everywhere in the star at roughly the same time, or only locally. Explain why this happens.
+
+\paragraph{A:} We select only those models where \(T > 10^6\,\mathrm{K}\). At around \(10^6\,\mathrm{K}\), \textsuperscript{2}H burning begins in the star's core where the temperature is highest. Because the star is fully convective up to about \(0.6\) Myr, convection rapidly mixes material throughout the interior. This efficient mixing transports \textsuperscript{2}H from the outer layers into the burning region and redistributes depleted material outward, causing the \textsuperscript{2}H abundance to decrease almost uniformly throughout the convective zone. Thus, the \textsuperscript{2}H abundance drops nearly simultaneously everywhere, showing a flat radial profile that declines over time. After convection ceases or weakens, depletion becomes more localized near the core. Cf. Figure~\ref{fig:q42_h2_profile} for the \textsuperscript{2}H abundance profile at different times. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{q42_h2_profile.pdf}
+    \caption{\textsuperscript{2}H abundance profiles at various times. The x-axis represents the mass coordinate, and the y-axis shows the \textsuperscript{2}H abundance. The colorbar indicates the star age. Initially, the \textsuperscript{2}H abundance decreases uniformly across the convective zone, resulting in a flat profile that declines over time.}
+    \label{fig:q42_h2_profile}
+\end{figure}
+
+\paragraph{Q4.4:} Use Python to draw an integer \(k\) from the list \([2, 3, 5, 7]\) using the line
+\begin{verbatim}
+numpy.random.choice([2, 3, 5, 7])
+\end{verbatim}
+What value did you draw for \(k\)? Now assume we live in a different universe, where \(^2\mathrm{H}\) burns at \(k \times 10^6\,\mathrm{K}\) instead of \(10^6\,\mathrm{K}\). In that case, for the stellar model you ran in this exercise, would you expect \(^2\mathrm{H}\) to be absent in every layer once it is exhausted in the center of the star? Use a plot to motivate your answer.
+
+\paragraph{A:} In our new universe, \(^2\mathrm{H}\) burns at \(2 \times 10^6\,\mathrm{K}\). At this higher temperature, deuterium burning begins later, when the star is less convective. As a result, \(^2\mathrm{H}\) is depleted primarily in the core, while the outer layers retain higher abundances. This leads to a non-uniform \(^2\mathrm{H}\) profile, with a step-wise depletion in the core as the outer layers slowly heat up to the required temperature to burn deuterium . In Figure \ref{fig:q42_h2_profile_new_universe}, we plot the \(^2\mathrm{H}\) abundance profiles in this alternate universe. The profile shows that while the core is depleted, the outer layers still contain significant amounts of \(^2\mathrm{H}\), indicating that it is not uniformly absent throughout the star.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{q42_h2_profile_new_universe.pdf}
+    \caption{\(^2\mathrm{H}\) abundance profiles in the alternate universe where deuterium burns at \(5 \times 10^6\,\mathrm{K}\). The abundance is depleted in the core but remains high in the outer layers, showing non-uniform depletion.}
+    \label{fig:q42_h2_profile_new_universe}
 \end{figure}
 
 \printbibliography
